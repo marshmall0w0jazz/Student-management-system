@@ -1,0 +1,48 @@
+[9:22 pm, 25/8/2026] Prabhat Sir: <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><span id="hrs"></span>:<span id="mins"></span>:<span id="se"></span>&nbsp;<span id="ampm"></span></h1>
+    <h2 class="text">Python</h2>
+    <h2 class="text">Java</h2>
+    <button onclick="text_change()">Save</button>
+    <script>
+       
+       function text_change(){
+        alert('hi')
+        document.getElementsByClassName("text")[0].innerHTML = "C++"
+        document.getElementsByClassName("text")[1].innerHTML = "Django"
+       }
+        
+
+        function clock() {
+             var d = new Date();
+             if(d.getHours() > 12){
+                time = "PM"
+             }
+             else{
+                time = "AM"
+             }
+            document.getElementById("hrs").innerHTML = d.getHours()
+            document.getElementById("mins").innerHTML = d.getMinutes()
+            document.getElementById("se").innerHTML = d.getSeconds()
+            document.getElementById("ampm").innerHTML = d.getHours() > 12 ? "PM" : "AM"
+        }
+
+        setInterval(clock,1000)
+        clock();
+    </script>
+</body>
+
+</html>
